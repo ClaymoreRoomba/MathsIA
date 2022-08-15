@@ -1,0 +1,17 @@
+{
+  "name": "mathsia",
+  "version": "1.0.0",
+  "description": "all of the sorting algorithms for my Maths IA",
+  "main": "run.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sorting",
+    "algorithms",
+    "sort"
+  ],
+  "author": "Filip",
+  "license": "ISC",
+  "type": "module"
+}
