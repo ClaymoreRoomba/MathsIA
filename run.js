@@ -2,6 +2,7 @@ import { bubble } from "./bubble.js";
 import { selSort } from "./selSort.js";
 import { heapSort } from "./heap.js";
 import { countSort } from "./count.js";
+import { radixSort } from "./radix.js";
 
 const randList = (size, max = 100) => new Array(size).fill(0).map(() => Math.floor( Math.random() * (max - 1) + 1 ));
 
@@ -44,3 +45,33 @@ const countSortStart = performance.now();
 
 const countSortEnd = performance.now();
 console.log(`   Elapsed: ${countSortEnd - countSortStart} ms\n`);
+
+
+
+//radix SORT
+const radixSortStart = performance.now();
+
+    console.log(`radix: [${radixSort(randList(listSize)).join(", ")}]`);
+
+const radixSortEnd = performance.now();
+console.log(`   Elapsed: ${radixSortEnd - radixSortStart} ms\n`);
+
+
+function run(iterations, fn, arr){
+
+    const times = [];
+
+    for(let i = 1; i <= iterations; i++){
+    
+        const t0 = performance.now();
+    
+        fn(arr);
+    
+        const t1 = performance.now();
+    
+        times.push(t1 - t0);
+    }
+
+    console.table(times);
+
+}
