@@ -1,3 +1,4 @@
+const randList = (size, max = 100) => new Array(size).fill(0).map(() => Math.floor( Math.random() * (max - 1) + 1 ));
 /*
 
 BUBBLE
@@ -13,8 +14,5 @@ BUBBLE
 
 
 */
-const arr = ["rock climbing", "volleyball", "basketball"];
 
-let x = undefined;
-
-console.log(10 < (x || -1))
+console.log(randList(10, 100));
